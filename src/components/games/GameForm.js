@@ -15,7 +15,7 @@ export const GameForm = props => {
         numberOfPlayers: 0,
         title: "",
         maker: "",
-        gameTypeId: 0
+        gameTypeId: 1
     })
 
     /*

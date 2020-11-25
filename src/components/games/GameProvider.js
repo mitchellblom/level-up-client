@@ -45,6 +45,7 @@ export const GameProvider = (props) => {
             getGames,
             getGameTypes,
             createGame,
+            getGameTypes,
             gameTypes
              }} >
             { props.children }
