@@ -18,18 +18,19 @@ export const ApplicationViews = () => {
             <GameProvider>
                 <Route exact path="/" render={ props => <GameList {...props}/>}/>
                 <Route exact path="/games/new" render={props => <GameForm {...props} />} />
+                <Route exact path="/games/:gameId(\d+)/edit" render={props => <GameForm {...props} />} />
                 <EventProvider>
                     <Route exact path="/events">
                         <EventList />
                     </Route>
                     <Route exact path="/events/new" render={props => <EventForm {...props} />} />
-                    <ProfileProvider>
-                        <Route exact path="/profile">
-                            <Profile />
-                        </Route>
-                    </ProfileProvider>
                 </EventProvider>
             </GameProvider>
+            <ProfileProvider>
+                <Route exact path="/profile">
+                    <Profile />
+                </Route>
+            </ProfileProvider>
         </main>
     </>
 }

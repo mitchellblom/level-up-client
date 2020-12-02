@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react"
-import { EventContext } from "./EventProvider.js"
+import { EventContext, joinEvent, leaveEvent } from "./EventProvider.js"
 // import "./Events.css"
 
 export const EventList = (props) => {

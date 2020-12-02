@@ -39,13 +39,27 @@ export const GameProvider = (props) => {
             .then(setTypes)
     }
 
+    const editGame = (game) => {
+        return fetch(`http://localhost:8000/games/${game.id}`, {
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json",
+                "Authorization": `Token ${localStorage.getItem("lu_token")}`
+            },
+            body: JSON.stringify(game)
+         })
+            .then(response => response.json())
+            .then(getGames)
+    }
+
     return (
         <GameContext.Provider value={{ 
             games, 
             getGames,
             createGame,
             getGameTypes,
-            gameTypes
+            gameTypes,
+            editGame
              }} >
             { props.children }
         </GameContext.Provider>
