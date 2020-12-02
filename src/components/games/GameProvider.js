@@ -43,7 +43,6 @@ export const GameProvider = (props) => {
         <GameContext.Provider value={{ 
             games, 
             getGames,
-            getGameTypes,
             createGame,
             getGameTypes,
             gameTypes

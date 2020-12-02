@@ -7,6 +7,7 @@ export const EventList = (props) => {
 
     useEffect(() => {
         getEvents()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

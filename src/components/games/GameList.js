@@ -6,6 +6,7 @@ export const GameList = (props) => {
 
     useEffect(() => {
         getGames()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

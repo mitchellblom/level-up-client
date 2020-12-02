@@ -24,6 +24,7 @@ export const GameForm = props => {
     */
     useEffect(() => {
         getGameTypes()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     /*

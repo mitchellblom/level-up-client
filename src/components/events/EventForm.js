@@ -15,6 +15,7 @@ export const EventForm = props => {
 
     useEffect(() => {
         getGames()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const handleControlledInputChange = (event) => {
